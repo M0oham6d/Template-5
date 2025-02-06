@@ -48,7 +48,7 @@ a {
 
 .page {
   background-color: #f1f5f9;
-  min-height: 200vh;
+  flex-direction: column;
 }
 /* End Global Rules */
 
@@ -142,7 +142,7 @@ a {
 @media (max-width: 767px) {
   .content {
     margin-left: 69px;
-    width: 100%;
+    width: calc(100% - 69px);
   }
 }
 
@@ -982,5 +982,148 @@ a {
   background-color: #015580;
 }
 /* End Social Media Stats */
+
+/* Start Projects */
+.projects {
+  overflow: hidden;
+  width: calc(100% - 260px);
+  margin-left: 240px;
+  margin-right: 20px;
+}
+
+@media (max-width: 767px) {
+  .projects {
+    margin-left: 79px;
+    width: calc(100% - 88px);
+  }
+}
+
+.projects .responsive-table {
+  overflow-x: auto;
+}
+
+.projects table {
+  width: 100%;
+  border-spacing: 0;
+}
+
+.projects table tbody tr {
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.projects table tbody tr:hover {
+  background-color: #faf7f7;
+}
+
+.projects table th,
+.projects table td {
+  padding: 20px 10px;
+  min-width: 110px;
+}
+
+.projects table td {
+  border: 1px solid #eee;
+}
+
+.projects table thead {
+  background-color: #eee;
+}
+
+.projects table tbody tr td:nth-child(5) img {
+  width: 30px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  left: 10px;
+}
+
+.projects table tbody tr:first-child td:nth-child(5) img:nth-child(2) {
+  margin-left: 15px;
+}
+
+.projects table tbody tr:first-child td:nth-child(5) img:nth-child(3) {
+  margin-left: 30px;
+}
+
+.projects table tbody tr:first-child td:nth-child(5) img:last-child {
+  margin-left: 45px;
+}
+
+.projects table tbody tr td:last-child span {
+  padding: 2px 6px;
+  border-radius: 6px;
+  color: white;
+  font-size: 14px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+.projects table tbody tr:first-child td:last-child span {
+  background-color: orange;
+}
+
+.projects table tbody tr:nth-child(2) td:nth-child(5) img:nth-child(2) {
+  margin-left: 15px;
+}
+
+.projects table tbody tr:nth-child(2) td:nth-child(5) img:last-child {
+  margin-left: 30px;
+}
+
+.projects table tbody tr:nth-child(2) td:last-child span {
+  background-color: var(--blue-color);
+}
+
+.projects table tbody tr:nth-child(3) td:nth-child(5) img:last-child {
+  margin-left: 15px;
+}
+
+.projects table tbody tr:nth-child(3) td:last-child span {
+  background-color: var(--green-color);
+}
+
+.projects table tbody tr:nth-child(4) td:nth-child(5) img:last-child {
+  margin-left: 15px;
+}
+
+.projects table tbody tr:nth-child(4) td:last-child span {
+  background-color: var(--green-color);
+}
+
+.projects table tbody tr:nth-child(5) td:nth-child(5) img:last-child {
+  margin-left: 15px;
+}
+
+.projects table tbody tr:nth-child(5) td:last-child span {
+  background-color: var(--red-color);
+}
+
+.projects table tbody tr:nth-child(6) td:nth-child(5) img:nth-child(2) {
+  margin-left: 15px;
+}
+
+.projects table tbody tr:nth-child(6) td:nth-child(5) img:last-child {
+  margin-left: 30px;
+}
+
+.projects table tbody tr:nth-child(6) td:last-child span {
+  background-color: var(--green-color);
+}
+/* End Projects */
 
 /* End Content */

@@ -181,6 +181,10 @@
   text-align: center;
 }
 
+.txt-l {
+  text-align: left;
+}
+
 @media (max-width: 767px) {
   .txt-c-mobile {
     text-align: center;
