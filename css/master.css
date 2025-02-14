@@ -1134,11 +1134,13 @@ a {
 /* End Projects */
 
 /* Start Settings */
-.sitecontrol > p {
+
+/* Start Site Control */
+.site-control > p {
   color: var(--grey-color);
 }
 
-.sitecontrol > div .text span {
+.site-control > div .text span {
   color: var(--grey-color);
 }
 
@@ -1203,16 +1205,378 @@ a {
   color: var(--blue-color);
 }
 
-.sitecontrol textarea {
+.site-control textarea {
   width: 100%;
   min-height: 150px;
   resize: none;
   border-color: #ccc;
 }
 
-.sitecontrol textarea::placeholder {
-  padding: 10px;
+/* End Site Control */
+
+/* Start General Info */
+.general-info > p {
+  color: var(--grey-color);
 }
+
+.general-info div label {
+  color: var(--grey-color);
+}
+
+.general-info div:last-child div input[type="email"] {
+  cursor: not-allowed;
+}
+
+@media (max-width: 767px) {
+  .general-info div:last-child div {
+    flex-direction: column;
+  }
+}
+
+.general-info div:last-child div a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  color: var(--blue-color);
+  cursor: pointer;
+}
+/* End General Info */
+
+/* Start Security Info */
+.security-info > p {
+  color: var(--grey-color);
+}
+
+.security-info > div:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+.security-info > div:not(:first-child) {
+  padding-top: 20px;
+}
+
+@media (max-width: 767px) {
+  .security-info > div {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.security-info div span {
+  color: var(--grey-color);
+}
+
+@media (max-width: 767px) {
+  .security-info .text {
+    margin-bottom: 10px;
+  }
+}
+
+.security-info > div .btn {
+  background-color: var(--blue-color);
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.security-info > div .btn:hover {
+  background-color: var(--blue-alt-color);
+}
+
+.security-info > div:last-child .btn {
+  background-color: #eee;
+}
+/* End Security Info */
+
+/* Start Social Info */
+.social-info > p {
+  color: var(--grey-color);
+}
+
+.social-info > div {
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.social-info > div:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+.social-info > div::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  background-color: #ddd;
+  left: 40px;
+  z-index: 1;
+}
+
+@media (max-width: 767px) {
+  .social-info > div::before {
+    left: 38px;
+  }
+}
+
+.social-info > div i {
+  position: absolute;
+  left: 13px;
+  font-size: 20px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+@media (max-width: 767px) {
+  .social-info > div i {
+    left: 8px;
+  }
+}
+
+.social-info > div input {
+  flex: 1;
+  margin-right: 20px;
+  border: 1px solid #ddd;
+  padding: 10px 50px;
+  background-color: #f6f6f6;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .social-info > div input {
+    margin-right: 0;
+    padding: 10px 0 10px 50px;
+  }
+}
+
+.social-info > div:focus-within i {
+  opacity: 1;
+}
+/* End Social Info */
+
+/* Start Widgets Control */
+.widgets-control > p {
+  color: var(--grey-color);
+}
+
+.widgets-control div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.widgets-control div input {
+  appearance: none;
+}
+
+.widgets-control div label {
+  cursor: pointer;
+  position: relative;
+  left: 15px;
+}
+
+.widgets-control div label:hover::before {
+  border: 2px solid var(--blue-color);
+}
+
+.widgets-control div label::before,
+.widgets-control div label::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  left: -28px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  top: 3px;
+}
+
+.widgets-control div label::before {
+  border: 2px solid var(--grey-color);
+}
+
+.widgets-control div label::after {
+  width: 18px;
+  height: 18px;
+  transform: scale(0) rotate(360deg);
+  -webkit-transform: scale(0) rotate(360deg);
+  -moz-transform: scale(0) rotate(360deg);
+  -ms-transform: scale(0) rotate(360deg);
+  -o-transform: scale(0) rotate(360deg);
+}
+
+.widgets-control div input:checked + label::after {
+  content: "\f00c";
+  font-family: var(--fa-style-family-classic);
+  font-weight: 900;
+  font-size: 12px;
+  width: 17px;
+  height: 17px;
+  top: 3px;
+  background-color: var(--blue-color);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(1) rotate(0);
+  -webkit-transform: scale(1) rotate(0);
+  -moz-transform: scale(1) rotate(0);
+  -ms-transform: scale(1) rotate(0);
+  -o-transform: scale(1) rotate(0);
+}
+/* End Widgets Control */
+
+/* Start Backup Manager */
+.backupmanager > p {
+  color: var(--grey-color);
+}
+
+.backupmanager > div {
+  margin-bottom: 15px;
+}
+
+.backupmanager > div > input {
+  appearance: none;
+}
+
+.backupmanager > div > label {
+  position: relative;
+  padding-left: 25px;
+}
+
+.backupmanager > div > label:hover::before {
+  border: 2px solid var(--blue-color);
+}
+
+.backupmanager > div > label::before,
+.backupmanager > div > label::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+.backupmanager > div > label::before {
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--grey-color);
+  left: 0;
+  top: 50%;
+}
+
+.backupmanager > div > label::after {
+  width: 12px;
+  height: 12px;
+  left: 3px;
+  top: 5px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  background-color: var(--blue-color);
+  transform: scale(0);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+}
+
+.backupmanager > div > input:checked + label::before {
+  border-color: var(--blue-color);
+}
+
+.backupmanager > div > input:checked + label::after {
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+}
+
+.backupmanager .servers {
+  justify-content: space-around;
+}
+
+@media (max-width: 767px) {
+  .backupmanager .servers {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+.backupmanager .servers input {
+  appearance: none;
+  display: none;
+}
+
+.backupmanager .servers > div {
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border: 1px solid #ddd;
+  padding: 10px 40px;
+  cursor: pointer;
+  width: 32%;
+}
+
+@media (max-width: 767px) {
+  .backupmanager .servers > div {
+    width: 100%;
+  }
+}
+
+.backupmanager .servers input:checked + div {
+  color: var(--blue-color);
+  border-color: var(--blue-color);
+}
+
+.backupmanager .servers .box {
+  flex-direction: column;
+  gap: 8px;
+}
+/* End Backup Manager */
+
 /* End Settings */
 
 /* End Content */
