@@ -2421,4 +2421,119 @@ a {
 }
 /* End Files */
 
+/* Start Plans */
+.plans-container {
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  margin: 0 20px 20px 20px;
+}
+
+@media (max-width: 767px) {
+  .plans-container {
+    grid-template-columns: minmax(200px, 1fr);
+    margin: 0 10px 20px 10px;
+    gap: 10px;
+  }
+}
+
+.plans-container .plan .price {
+  border: 3px solid white;
+  flex-direction: column;
+  color: white;
+  padding: 15px;
+}
+
+.plans-container .free .price {
+  background-color: var(--green-color);
+  outline: 3px solid var(--green-color);
+}
+
+.plans-container .basic .price {
+  background-color: var(--blue-color);
+  outline: 3px solid var(--blue-color);
+}
+
+.plans-container .premium .price {
+  background-color: orange;
+  outline: 3px solid orange;
+}
+
+.plans-container .plan .price p {
+  font-size: 40px;
+}
+
+.plans-container .plan .features ul li {
+  border-bottom: 1px solid #eee;
+}
+
+@media (max-width: 767px) {
+  .plans-container .plan .features ul li {
+    font-size: 15px;
+  }
+}
+
+.plans-container .plan .features ul li i.fa-check {
+  color: var(--green-color);
+  font-size: 18px;
+}
+
+.plans-container .plan .features ul li i.fa-xmark {
+  color: var(--red-color);
+  font-size: 18px;
+}
+
+.plans-container .plan .features ul li i.fa-circle-info {
+  color: var(--grey-color);
+  cursor: pointer;
+}
+
+.plans-container .plan .join a {
+  padding: 5px 20px;
+  border-radius: 6px;
+  color: white;
+}
+
+.plans-container .free .join a {
+  background-color: var(--green-color);
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.plans-container .free .join a:hover {
+  background-color: green;
+}
+
+.plans-container .basic .join a {
+  background-color: var(--blue-color);
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.plans-container .basic .join a:hover {
+  background-color: var(--blue-alt-color);
+}
+
+.plans-container .premium .join a {
+  background-color: var(--blue-color);
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.plans-container .premium .join a:hover {
+  background-color: var(--blue-alt-color);
+}
+
+.plans-container .premium .join p {
+  color: var(--grey-color);
+}
+/* End Plans */
+
 /* End Content */
