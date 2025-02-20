@@ -2280,6 +2280,19 @@ a {
 
 .files-container .file .box div:first-of-type img {
   width: 60px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.files-container .file .box:hover div:first-of-type img {
+  transform: rotate(5deg);
+  -webkit-transform: rotate(5deg);
+  -moz-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  -o-transform: rotate(5deg);
 }
 
 .files-container .file .box > p,
